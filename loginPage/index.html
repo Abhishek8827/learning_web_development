@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#11131f">
-  <meta name="description" content="Sign in or create your account. A polished, responsive login and sign-up page demo.">
-  <title>Welcome back — Goodspace</title>
+  <meta name="theme-color" content="#17172c">
+  <meta name="description" content="A simple interactive login and sign-up page.">
+  <title>Welcome — Daylight</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,177 +13,124 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="auth-page container-fluid">
-    <div class="ambient ambient-one" aria-hidden="true"></div>
-    <div class="ambient ambient-two" aria-hidden="true"></div>
-
+  <main class="page container-fluid">
     <header class="topbar">
-      <a class="brand" href="#" aria-label="Goodspace home"><span class="brand-mark" aria-hidden="true">g</span>goodspace<span class="brand-period">.</span></a>
-      <p class="topbar-note">A little room to grow.</p>
-      <a class="help-link" href="mailto:hello@goodspace.example">Need a hand? <span>Get in touch</span></a>
+      <a class="brand" href="#" aria-label="Daylight home"><span class="brand-icon" aria-hidden="true">d</span>daylight<span class="brand-dot">.</span></a>
+      <span class="topbar-note">Your day, a little brighter.</span>
     </header>
 
-    <section class="auth-shell row g-0" aria-labelledby="page-title">
-      <div class="welcome-panel col-lg-4">
-        <div class="welcome-content">
-          <p class="eyebrow"><span class="status-dot"></span> YOUR SPACE, YOUR PACE</p>
-          <h1 id="page-title">A better day<br>starts <span>here.</span></h1>
-          <p class="welcome-copy">A calmer place to keep your plans, collect your thoughts, and make a little progress.</p>
-          <div class="welcome-art" aria-hidden="true">
-            <div class="art-orbit"></div>
-            <div class="art-sun"></div>
-            <div class="art-hill hill-back"></div>
-            <div class="art-hill hill-front"></div>
-            <div class="art-star star-one">✳</div>
-            <div class="art-star star-two">✦</div>
-            <div class="art-label">TAKE A BREATH<br>YOU’RE RIGHT ON TIME</div>
-          </div>
-          <div class="welcome-footer"><span>01</span><span class="footer-line"></span><span>MAKE YOURSELF AT HOME</span></div>
-        </div>
+    <div class="page-heading">
+      <span class="eyebrow"><span class="live-dot"></span> YOUR SPACE IS WAITING</span>
+      <h1>Good things start <span>here.</span></h1>
+    </div>
+
+    <section class="auth-stage" aria-label="Log in or create an account">
+      <div class="stage-message signup-message">
+        <span class="stage-number">01 — A FRESH START</span>
+        <h2>Make space<br>for what’s next.</h2>
+        <p>A small step toward a brighter day.</p>
+      </div>
+      <div class="stage-message login-message">
+        <span class="stage-number">02 — YOUR SPACE</span>
+        <h2>Lovely to<br>have you back.</h2>
+        <p>Pick up right where you left off.</p>
       </div>
 
-      <div class="forms-panel col-lg-8">
-        <div class="forms-heading">
-          <div>
-            <p class="eyebrow">YOUR NEXT CHAPTER</p>
-            <h2>Good to see you.</h2>
-          </div>
-          <div class="auth-switch" role="tablist" aria-label="Choose login or sign up">
-            <button class="switch-option is-active" id="login-tab" type="button" role="tab" aria-selected="true" aria-controls="login-form">Log in</button>
-            <button class="switch-option" id="signup-tab" type="button" role="tab" aria-selected="false" aria-controls="signup-form">Sign up</button>
-            <span class="switch-highlight" aria-hidden="true"></span>
-          </div>
-        </div>
-
-        <div class="form-grid">
-          <section class="form-card login-card is-selected" id="login-card" aria-labelledby="login-heading">
-            <div class="card-kicker"><span class="card-number">01</span><span class="card-type">WELCOME BACK</span></div>
-            <h3 id="login-heading">Pick up where<br>you left off.</h3>
-            <p class="form-intro">Your space is right where you left it.</p>
-
-            <button class="social-button btn w-100" type="button" data-demo="Google sign-in">
-              <span class="google-mark" aria-hidden="true">G</span> Continue with Google
-            </button>
-            <div class="form-divider"><span></span>or use your email<span></span></div>
-
-            <form class="auth-form" id="login-form">
-              <div class="mb-3">
-                <label class="form-label" for="login-email">Email address</label>
-                <input class="form-control" id="login-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
-              </div>
-              <div class="mb-2">
-                <div class="label-row"><label class="form-label" for="login-password">Password</label><a href="#forgot-password" class="subtle-link" data-demo="Password reset">Forgot password?</a></div>
-                <div class="password-wrap">
-                  <input class="form-control" id="login-password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required minlength="8">
-                  <button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false" data-password="login-password"><span aria-hidden="true">◉</span></button>
-                </div>
-              </div>
-              <div class="form-check remember-row">
-                <input class="form-check-input" type="checkbox" id="remember-me" name="remember">
-                <label class="form-check-label" for="remember-me">Keep me signed in</label>
-              </div>
-              <button class="submit-button btn w-100" type="submit">Log in <span aria-hidden="true">↗</span></button>
-            </form>
-            <p class="form-bottom">New around here? <button type="button" class="inline-switch" data-switch="signup">Create an account</button></p>
-          </section>
-
-          <section class="form-card signup-card" id="signup-card" aria-labelledby="signup-heading">
-            <div class="card-kicker"><span class="card-number">02</span><span class="card-type">A FRESH START</span></div>
-            <h3 id="signup-heading">Make space<br>for what’s next.</h3>
-            <p class="form-intro">Your own little corner of the internet.</p>
-
-            <button class="social-button btn w-100" type="button" data-demo="Google sign-up">
-              <span class="google-mark" aria-hidden="true">G</span> Sign up with Google
-            </button>
-            <div class="form-divider"><span></span>or start with email<span></span></div>
-
-            <form class="auth-form" id="signup-form">
+      <div class="auth-card" id="auth-card">
+        <div class="auth-card-inner">
+          <section class="form-view signup-view" id="signup-view" aria-labelledby="signup-title">
+            <span class="form-step">01 / SIGN UP</span>
+            <h2 id="signup-title">Create your account</h2>
+            <p class="form-subtitle">A little space, just for you.</p>
+            <form id="signup-form">
               <div class="mb-3">
                 <label class="form-label" for="signup-name">Your name</label>
-                <input class="form-control" id="signup-name" name="name" type="text" placeholder="What should we call you?" autocomplete="name" required>
+                <input class="form-control" id="signup-name" name="name" type="text" placeholder="Alex Morgan" autocomplete="name" required>
               </div>
               <div class="mb-3">
                 <label class="form-label" for="signup-email">Email address</label>
                 <input class="form-control" id="signup-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
               </div>
-              <div class="mb-2">
-                <label class="form-label" for="signup-password">Create a password</label>
-                <div class="password-wrap">
-                  <input class="form-control" id="signup-password" name="password" type="password" placeholder="At least 8 characters" autocomplete="new-password" required minlength="8">
-                  <button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false" data-password="signup-password"><span aria-hidden="true">◉</span></button>
-                </div>
+              <div class="mb-3">
+                <label class="form-label" for="signup-password">Password</label>
+                <input class="form-control" id="signup-password" name="password" type="password" placeholder="At least 8 characters" autocomplete="new-password" minlength="8" required>
               </div>
-              <div class="form-check remember-row terms-row">
-                <input class="form-check-input" type="checkbox" id="agree-terms" name="terms" required>
-                <label class="form-check-label" for="agree-terms">I agree to the <a href="#terms" class="subtle-link" data-demo="Terms of service">terms</a> &amp; <a href="#privacy" class="subtle-link" data-demo="Privacy policy">privacy policy</a>.</label>
-              </div>
-              <button class="submit-button btn w-100" type="submit">Create my space <span aria-hidden="true">↗</span></button>
+              <button class="submit-button btn w-100" type="submit">Create account <span aria-hidden="true">→</span></button>
             </form>
-            <p class="form-bottom">Already have a space? <button type="button" class="inline-switch" data-switch="login">Log in</button></p>
+            <p class="mobile-switch">Already a member? <button type="button" data-mode="login">Log in</button></p>
+          </section>
+
+          <section class="form-view login-view" id="login-view" aria-labelledby="login-title" aria-hidden="true" inert>
+            <span class="form-step">02 / WELCOME BACK</span>
+            <h2 id="login-title">Log in to Daylight</h2>
+            <p class="form-subtitle">Your good things are right here.</p>
+            <form id="login-form">
+              <div class="mb-3">
+                <label class="form-label" for="login-email">Email address</label>
+                <input class="form-control" id="login-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="login-password">Password</label>
+                <input class="form-control" id="login-password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" minlength="8" required>
+              </div>
+              <button class="submit-button btn w-100" type="submit">Log in <span aria-hidden="true">→</span></button>
+            </form>
+            <p class="mobile-switch">New around here? <button type="button" data-mode="signup">Sign up</button></p>
           </section>
         </div>
-
-        <p class="demo-note"><span aria-hidden="true">✳</span> Front-end demo. Your details stay in your browser; authentication isn’t connected.</p>
       </div>
     </section>
 
-    <footer class="page-footer"><span>© GOODSPACE 2026</span><span>MADE FOR YOUR EVERYDAY</span><a href="mailto:hello@goodspace.example">A little help <span aria-hidden="true">↗</span></a></footer>
-    <div class="toast-message" role="status" aria-live="polite"></div>
+    <nav class="mode-switch" aria-label="Choose a form">
+      <button class="mode-button is-active" type="button" data-mode="signup" aria-pressed="true">Sign up</button>
+      <button class="mode-button" type="button" data-mode="login" aria-pressed="false">Log in</button>
+      <span class="mode-indicator" aria-hidden="true"></span>
+    </nav>
+
+    <footer class="page-footer"><span>© DAYLIGHT 2026</span><span>TAKE IT ONE DAY AT A TIME</span></footer>
+    <p class="demo-notice" role="status" aria-live="polite"></p>
   </main>
 
   <script>
-    const loginTab = document.querySelector("#login-tab");
-    const signupTab = document.querySelector("#signup-tab");
-    const formsPanel = document.querySelector(".forms-panel");
-    const toast = document.querySelector(".toast-message");
-    let toastTimer;
+    const card = document.querySelector("#auth-card");
+    const signupView = document.querySelector("#signup-view");
+    const loginView = document.querySelector("#login-view");
+    const modeButtons = document.querySelectorAll(".mode-button");
+    const notice = document.querySelector(".demo-notice");
+    let noticeTimer;
 
-    function selectForm(form) {
-      const isSignup = form === "signup";
-      formsPanel.classList.toggle("show-signup", isSignup);
-      document.querySelector("#login-card").classList.toggle("is-selected", !isSignup);
-      document.querySelector("#signup-card").classList.toggle("is-selected", isSignup);
-      loginTab.classList.toggle("is-active", !isSignup);
-      signupTab.classList.toggle("is-active", isSignup);
-      loginTab.setAttribute("aria-selected", String(!isSignup));
-      signupTab.setAttribute("aria-selected", String(isSignup));
-      document.querySelector(isSignup ? "#signup-heading" : "#login-heading").focus({ preventScroll: true });
-    }
+    function setMode(mode) {
+      const isLogin = mode === "login";
+      card.classList.toggle("is-login", isLogin);
+      signupView.classList.toggle("is-current", !isLogin);
+      loginView.classList.toggle("is-current", isLogin);
+      signupView.setAttribute("aria-hidden", String(isLogin));
+      loginView.setAttribute("aria-hidden", String(!isLogin));
+      signupView.toggleAttribute("inert", isLogin);
+      loginView.toggleAttribute("inert", !isLogin);
 
-    function showMessage(message) {
-      toast.textContent = message;
-      toast.classList.add("is-visible");
-      window.clearTimeout(toastTimer);
-      toastTimer = window.setTimeout(() => toast.classList.remove("is-visible"), 3400);
-    }
-
-    loginTab.addEventListener("click", () => selectForm("login"));
-    signupTab.addEventListener("click", () => selectForm("signup"));
-    document.querySelectorAll("[data-switch]").forEach((button) => {
-      button.addEventListener("click", () => selectForm(button.dataset.switch));
-    });
-
-    document.querySelectorAll("[data-password]").forEach((button) => {
-      button.addEventListener("click", () => {
-        const input = document.getElementById(button.dataset.password);
-        const isVisible = input.type === "text";
-        input.type = isVisible ? "password" : "text";
-        button.setAttribute("aria-pressed", String(!isVisible));
-        button.setAttribute("aria-label", isVisible ? "Show password" : "Hide password");
+      modeButtons.forEach((button) => {
+        const selected = button.dataset.mode === mode;
+        button.classList.toggle("is-active", selected);
+        button.setAttribute("aria-pressed", String(selected));
       });
+    }
+
+    modeButtons.forEach((button) => {
+      button.addEventListener("click", () => setMode(button.dataset.mode));
     });
 
-    document.querySelectorAll(".auth-form").forEach((form) => {
+    document.querySelectorAll("[data-mode]:not(.mode-button)").forEach((button) => {
+      button.addEventListener("click", () => setMode(button.dataset.mode));
+    });
+
+    document.querySelectorAll(".auth-card form").forEach((form) => {
       form.addEventListener("submit", (event) => {
         event.preventDefault();
-        showMessage("This is a front-end demo. Connect an authentication service to continue.");
-      });
-    });
-
-    document.querySelectorAll("[data-demo]").forEach((button) => {
-      button.addEventListener("click", (event) => {
-        event.preventDefault();
-        showMessage(`${button.dataset.demo} needs a connected service in this demo.`);
+        notice.textContent = "This demo doesn’t connect to an account service yet.";
+        notice.classList.add("is-visible");
+        window.clearTimeout(noticeTimer);
+        noticeTimer = window.setTimeout(() => notice.classList.remove("is-visible"), 3000);
       });
     });
   </script>
